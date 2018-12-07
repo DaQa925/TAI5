@@ -17,11 +17,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {FilterPipe} from './pipes/filter.pipe';
 import {FormsModule, Validators} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { BlogHomeComponent } from './components/blog-home/blog-home.component';
+import { TextFOrmatDirective } from './directives/text-format.directive';
 
 const appRoutes: Routes = [
     {
-        path: '',
-        component: HomeComponent,
+        path: 'blog-home',
+        component: BlogHomeComponent,
     },
     {
         path: 'quiz',
@@ -55,6 +58,9 @@ const appRoutes: Routes = [
         BlogDetailsComponent,
         SummaryPipe,
         FilterPipe,
+        SearchBarComponent,
+        BlogHomeComponent,
+        TextFOrmatDirective,
     ],
     imports: [
         BrowserModule,

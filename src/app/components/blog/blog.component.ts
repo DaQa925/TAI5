@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DataServiceService} from '../../services/data-service.service';
 
 @Component({
@@ -10,6 +10,8 @@ export class BlogComponent implements OnInit {
 
   items: any;
   filterText: string;
+
+    @Input('filterText') filterText: string;
 
   items_old = [
     {
